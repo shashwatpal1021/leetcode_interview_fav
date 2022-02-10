@@ -127,3 +127,45 @@ class Solution {
       return Arrays.equals(first, second);
    }
 }
+
+
+class New {
+
+   public static void main(String[] args) {
+      // String a = "sadder";
+      // String b = "dreads";
+      String s = "shashwat";
+      char[] S = s.toCharArray();
+      char[] a = { 's', 'a', 'd', 'd', 'e', 'r' };
+      char[] b = { 'd', 'r', 'e', 'a', 'd', 's' };
+
+      int n1 = a.length;
+      int n2 = b.length; //
+
+      int arr[] = new int[26];
+      for (int i = 0; i < a.length; i++) {
+         arr[a[i] - 'a']++;
+      }
+      int arr1[] = new int[26];
+      for (int i = 0; i < b.length; i++) {
+         arr1[b[i] - 'a']++;
+      }
+      boolean flag = true;
+      for (int i = 0; i < 26; i++) {
+         // System.out.print(arr[i] + " ");
+
+         if (arr[i] != arr1[i]) {
+            System.out.println("String is not a anagram");
+            flag = false;
+            break;
+         }
+
+      }
+      if (flag == true) {
+         System.out.println("String is a anagram");
+      }
+
+
+      for (int i = 0; i < S.length; i++) {
+         System.out.print(S[i]+" ");
+      }
